@@ -12,5 +12,5 @@ def multiple_letter_count(phrase):
         if char in word_count_dict:
             word_count_dict[char] += 1
         else:
-            word_count_dict[char] =1
+            word_count_dict[char] = 1
     return word_count_dict
