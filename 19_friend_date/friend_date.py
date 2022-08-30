@@ -16,3 +16,10 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    set_one = set(a[2])
+    set_two = set(b[2])
+    intersection = set_one & set_two
+    if len(intersection):
+        return True
+    else:
+        return False

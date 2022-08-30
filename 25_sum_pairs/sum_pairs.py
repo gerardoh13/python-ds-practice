@@ -21,3 +21,21 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    # poorly worded question how does one pair finish before another?
+    # nums.sort()
+    # for i in range(len(nums) -1 ):
+    #     for j in range(i + 1, len (nums)):
+    #         if nums[i] + nums[j] == goal:
+    #             return (nums[i], nums[j])
+    # return ()
+    already_visited = set()
+
+    for i in nums:
+        difference = goal - i
+
+        if difference in already_visited:
+            return (difference, i)
+
+        already_visited.add(i)
+    return ()
+

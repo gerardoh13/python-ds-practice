@@ -1,3 +1,6 @@
+from curses.ascii import isdigit
+
+
 def find_factors(num):
     """Find factors of num, in increasing order.
 
@@ -13,3 +16,9 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+    lst = []
+    for i in range(1,num + 1):
+        if (num/i).is_integer():
+            lst.append(i)
+    return lst
+
